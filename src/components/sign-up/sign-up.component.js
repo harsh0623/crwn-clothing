@@ -20,6 +20,7 @@ class SignUp extends React.Component {
   }
 
   handleSubmit = async event => {
+
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
@@ -46,7 +47,6 @@ class SignUp extends React.Component {
     } catch (error) {
       console.error(error);
     }
-    
   };
 
   handleChange = event => {
@@ -94,7 +94,7 @@ class SignUp extends React.Component {
             label='Confirm Password'
             required
           />
-          <CustomButton className='submit-button' type='submit'>SIGN UP</CustomButton>
+          <CustomButton type='submit'>SIGN UP</CustomButton>
         </form>
       </div>
     );
