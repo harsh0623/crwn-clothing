@@ -10,6 +10,7 @@ const config = {
     messagingSenderId: "922720829103",
     appId: "1:922720829103:web:f111f364f0fb3c703ede5a",
     measurementId: "G-J4FVPQB7NQ"
+
 };
 
 firebase.initializeApp(config);
@@ -38,6 +39,11 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
     return userRef;
 };
+
+export const addCollectionAndDocuments = (collectionKey, objectsToAdd) => {
+    const collectionRef = firestore.collection(collectionKey);
+    console.log(collectionRef);
+}
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
